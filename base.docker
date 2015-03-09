@@ -12,4 +12,4 @@ RUN apt-get install -qyy \
     python-virtualenv pypy libffi6 openssl
 
 RUN virtualenv -p /usr/bin/pypy /appenv
-RUN . /appenv/bin/activate; pip install pip==6.0.8
+RUN /appenv/bin/pip install pip==6.0.8

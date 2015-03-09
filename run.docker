@@ -1,10 +1,8 @@
 FROM deployme-base
 
 ADD wheelhouse /wheelhouse
-RUN . /appenv/bin/activate; \
-    pip install --no-index -f wheelhouse DeployMe
+RUN /appenv/bin/pip install --no-index -f wheelhouse DeployMe
 
 EXPOSE 8081
 
-ENTRYPOINT . /appenv/bin/activate; \
-           run-the-app
+ENTRYPOINT /appenv/bin/run-the-app
