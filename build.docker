@@ -2,7 +2,7 @@ FROM deployme-base
 
 RUN apt-get install -qy libffi-dev libssl-dev pypy-dev
 RUN . /appenv/bin/activate; \
-    pip install wheel
+    pip install wheel==0.26.0
 
 ENV WHEELHOUSE=/wheelhouse
 ENV PIP_WHEEL_DIR=/wheelhouse
